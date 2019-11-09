@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D78B1E0D7C53734C7FC6A3B /* Pods_CryptoWalletTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216C6044C3DB127DB7E44FD1 /* Pods_CryptoWalletTests.framework */; };
+		25B4A3AE2376CA4F0041CE3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3AD2376CA4F0041CE3C /* AppDelegate.swift */; };
+		25B4A3B02376CA4F0041CE3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3AF2376CA4F0041CE3C /* SceneDelegate.swift */; };
+		25B4A3B22376CA4F0041CE3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3B12376CA4F0041CE3C /* ViewController.swift */; };
+		25B4A3B52376CA4F0041CE3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4A3B32376CA4F0041CE3C /* Main.storyboard */; };
+		25B4A3B72376CA510041CE3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25B4A3B62376CA510041CE3C /* Assets.xcassets */; };
+		25B4A3BA2376CA510041CE3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4A3B82376CA510041CE3C /* LaunchScreen.storyboard */; };
+		25B4A3C52376CA510041CE3C /* CryptoWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3C42376CA510041CE3C /* CryptoWalletTests.swift */; };
+		25B4A3D02376CA520041CE3C /* CryptoWalletUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3CF2376CA520041CE3C /* CryptoWalletUITests.swift */; };
+		25B4A3DE2376CC6E0041CE3C /* HDWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25B4A3DD2376CC6E0041CE3C /* HDWallet.framework */; };
+		25B4A3E02376CF8E0041CE3C /* EthereumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3DF2376CF8E0041CE3C /* EthereumViewController.swift */; };
+		25B4A3E22376CF960041CE3C /* Ethereum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25B4A3E12376CF960041CE3C /* Ethereum.storyboard */; };
+		25B4A3E423770E800041CE3C /* QRCodeImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3E323770E800041CE3C /* QRCodeImageView.swift */; };
+		25B4A3E62377101D0041CE3C /* UserDefaultsUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B4A3E52377101D0041CE3C /* UserDefaultsUtil.swift */; };
+		5A24D5116F954C56D16F9FAF /* Pods_CryptoWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668FA30F95D5DE2028E46AAD /* Pods_CryptoWallet.framework */; };
+		B9DE8EF22B802ABF73470A49 /* Pods_CryptoWallet_CryptoWalletUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D3EF19F0827A5DF60B79A9 /* Pods_CryptoWallet_CryptoWalletUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25B4A3C12376CA510041CE3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25B4A3A22376CA4F0041CE3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25B4A3A92376CA4F0041CE3C;
+			remoteInfo = CryptoWallet;
+		};
+		25B4A3CC2376CA520041CE3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 25B4A3A22376CA4F0041CE3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 25B4A3A92376CA4F0041CE3C;
+			remoteInfo = CryptoWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		058028ABD0C222F4689DA426 /* Pods-CryptoWallet-CryptoWalletUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWallet-CryptoWalletUITests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoWallet-CryptoWalletUITests/Pods-CryptoWallet-CryptoWalletUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		216C6044C3DB127DB7E44FD1 /* Pods_CryptoWalletTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoWalletTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B4A3AA2376CA4F0041CE3C /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B4A3AD2376CA4F0041CE3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		25B4A3AF2376CA4F0041CE3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		25B4A3B12376CA4F0041CE3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		25B4A3B42376CA4F0041CE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25B4A3B62376CA510041CE3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		25B4A3B92376CA510041CE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		25B4A3BB2376CA510041CE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B4A3C02376CA510041CE3C /* CryptoWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B4A3C42376CA510041CE3C /* CryptoWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletTests.swift; sourceTree = "<group>"; };
+		25B4A3C62376CA510041CE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B4A3CB2376CA520041CE3C /* CryptoWalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoWalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B4A3CF2376CA520041CE3C /* CryptoWalletUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoWalletUITests.swift; sourceTree = "<group>"; };
+		25B4A3D12376CA520041CE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25B4A3DD2376CC6E0041CE3C /* HDWallet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HDWallet.framework; sourceTree = "<group>"; };
+		25B4A3DF2376CF8E0041CE3C /* EthereumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EthereumViewController.swift; sourceTree = "<group>"; };
+		25B4A3E12376CF960041CE3C /* Ethereum.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ethereum.storyboard; sourceTree = "<group>"; };
+		25B4A3E323770E800041CE3C /* QRCodeImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeImageView.swift; sourceTree = "<group>"; };
+		25B4A3E52377101D0041CE3C /* UserDefaultsUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtil.swift; sourceTree = "<group>"; };
+		668FA30F95D5DE2028E46AAD /* Pods_CryptoWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67D3EF19F0827A5DF60B79A9 /* Pods_CryptoWallet_CryptoWalletUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoWallet_CryptoWalletUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C14E3D7D86BA90CD9AC1C80 /* Pods-CryptoWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWallet.debug.xcconfig"; path = "Target Support Files/Pods-CryptoWallet/Pods-CryptoWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		AAE24E5E72D8EB4A17269E0A /* Pods-CryptoWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWallet.release.xcconfig"; path = "Target Support Files/Pods-CryptoWallet/Pods-CryptoWallet.release.xcconfig"; sourceTree = "<group>"; };
+		C2BDE062BD00BEAD505A8026 /* Pods-CryptoWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-CryptoWalletTests/Pods-CryptoWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CCBFDC0A7BABE06EF38F3243 /* Pods-CryptoWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWalletTests.release.xcconfig"; path = "Target Support Files/Pods-CryptoWalletTests/Pods-CryptoWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		E741373C8CD92850E3FFED55 /* Pods-CryptoWallet-CryptoWalletUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoWallet-CryptoWalletUITests.release.xcconfig"; path = "Target Support Files/Pods-CryptoWallet-CryptoWalletUITests/Pods-CryptoWallet-CryptoWalletUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		25B4A3A72376CA4F0041CE3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A24D5116F954C56D16F9FAF /* Pods_CryptoWallet.framework in Frameworks */,
+				25B4A3DE2376CC6E0041CE3C /* HDWallet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3BD2376CA510041CE3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D78B1E0D7C53734C7FC6A3B /* Pods_CryptoWalletTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3C82376CA520041CE3C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9DE8EF22B802ABF73470A49 /* Pods_CryptoWallet_CryptoWalletUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		25B4A3A12376CA4F0041CE3C = {
+			isa = PBXGroup;
+			children = (
+				25B4A3AC2376CA4F0041CE3C /* CryptoWallet */,
+				25B4A3C32376CA510041CE3C /* CryptoWalletTests */,
+				25B4A3CE2376CA520041CE3C /* CryptoWalletUITests */,
+				25B4A3AB2376CA4F0041CE3C /* Products */,
+				F547BF0921082F86A3EF5EB0 /* Pods */,
+				8FFDFE059E484E6EA0D41359 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		25B4A3AB2376CA4F0041CE3C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25B4A3AA2376CA4F0041CE3C /* CryptoWallet.app */,
+				25B4A3C02376CA510041CE3C /* CryptoWalletTests.xctest */,
+				25B4A3CB2376CA520041CE3C /* CryptoWalletUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25B4A3AC2376CA4F0041CE3C /* CryptoWallet */ = {
+			isa = PBXGroup;
+			children = (
+				25B4A3AD2376CA4F0041CE3C /* AppDelegate.swift */,
+				25B4A3AF2376CA4F0041CE3C /* SceneDelegate.swift */,
+				25B4A3B12376CA4F0041CE3C /* ViewController.swift */,
+				25B4A3B32376CA4F0041CE3C /* Main.storyboard */,
+				25B4A3B62376CA510041CE3C /* Assets.xcassets */,
+				25B4A3B82376CA510041CE3C /* LaunchScreen.storyboard */,
+				25B4A3BB2376CA510041CE3C /* Info.plist */,
+				25B4A3DF2376CF8E0041CE3C /* EthereumViewController.swift */,
+				25B4A3E12376CF960041CE3C /* Ethereum.storyboard */,
+				25B4A3E323770E800041CE3C /* QRCodeImageView.swift */,
+				25B4A3E52377101D0041CE3C /* UserDefaultsUtil.swift */,
+			);
+			path = CryptoWallet;
+			sourceTree = "<group>";
+		};
+		25B4A3C32376CA510041CE3C /* CryptoWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				25B4A3C42376CA510041CE3C /* CryptoWalletTests.swift */,
+				25B4A3C62376CA510041CE3C /* Info.plist */,
+			);
+			path = CryptoWalletTests;
+			sourceTree = "<group>";
+		};
+		25B4A3CE2376CA520041CE3C /* CryptoWalletUITests */ = {
+			isa = PBXGroup;
+			children = (
+				25B4A3CF2376CA520041CE3C /* CryptoWalletUITests.swift */,
+				25B4A3D12376CA520041CE3C /* Info.plist */,
+			);
+			path = CryptoWalletUITests;
+			sourceTree = "<group>";
+		};
+		8FFDFE059E484E6EA0D41359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25B4A3DD2376CC6E0041CE3C /* HDWallet.framework */,
+				668FA30F95D5DE2028E46AAD /* Pods_CryptoWallet.framework */,
+				67D3EF19F0827A5DF60B79A9 /* Pods_CryptoWallet_CryptoWalletUITests.framework */,
+				216C6044C3DB127DB7E44FD1 /* Pods_CryptoWalletTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F547BF0921082F86A3EF5EB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6C14E3D7D86BA90CD9AC1C80 /* Pods-CryptoWallet.debug.xcconfig */,
+				AAE24E5E72D8EB4A17269E0A /* Pods-CryptoWallet.release.xcconfig */,
+				058028ABD0C222F4689DA426 /* Pods-CryptoWallet-CryptoWalletUITests.debug.xcconfig */,
+				E741373C8CD92850E3FFED55 /* Pods-CryptoWallet-CryptoWalletUITests.release.xcconfig */,
+				C2BDE062BD00BEAD505A8026 /* Pods-CryptoWalletTests.debug.xcconfig */,
+				CCBFDC0A7BABE06EF38F3243 /* Pods-CryptoWalletTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		25B4A3A92376CA4F0041CE3C /* CryptoWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B4A3D42376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWallet" */;
+			buildPhases = (
+				7A76E952E82669315C357FFA /* [CP] Check Pods Manifest.lock */,
+				25B4A3A62376CA4F0041CE3C /* Sources */,
+				25B4A3A72376CA4F0041CE3C /* Frameworks */,
+				25B4A3A82376CA4F0041CE3C /* Resources */,
+				5ACCE213D7D03E49460432EC /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoWallet;
+			productName = CryptoWallet;
+			productReference = 25B4A3AA2376CA4F0041CE3C /* CryptoWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25B4A3BF2376CA510041CE3C /* CryptoWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B4A3D72376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWalletTests" */;
+			buildPhases = (
+				4EF25F8496E9C1D829830B11 /* [CP] Check Pods Manifest.lock */,
+				25B4A3BC2376CA510041CE3C /* Sources */,
+				25B4A3BD2376CA510041CE3C /* Frameworks */,
+				25B4A3BE2376CA510041CE3C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25B4A3C22376CA510041CE3C /* PBXTargetDependency */,
+			);
+			name = CryptoWalletTests;
+			productName = CryptoWalletTests;
+			productReference = 25B4A3C02376CA510041CE3C /* CryptoWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		25B4A3CA2376CA520041CE3C /* CryptoWalletUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25B4A3DA2376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWalletUITests" */;
+			buildPhases = (
+				31D5A022CD28986935AB41EC /* [CP] Check Pods Manifest.lock */,
+				25B4A3C72376CA520041CE3C /* Sources */,
+				25B4A3C82376CA520041CE3C /* Frameworks */,
+				25B4A3C92376CA520041CE3C /* Resources */,
+				FE6F916738318E2A935BF2CD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25B4A3CD2376CA520041CE3C /* PBXTargetDependency */,
+			);
+			name = CryptoWalletUITests;
+			productName = CryptoWalletUITests;
+			productReference = 25B4A3CB2376CA520041CE3C /* CryptoWalletUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		25B4A3A22376CA4F0041CE3C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Shuichi Nagao";
+				TargetAttributes = {
+					25B4A3A92376CA4F0041CE3C = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					25B4A3BF2376CA510041CE3C = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 25B4A3A92376CA4F0041CE3C;
+					};
+					25B4A3CA2376CA520041CE3C = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 25B4A3A92376CA4F0041CE3C;
+					};
+				};
+			};
+			buildConfigurationList = 25B4A3A52376CA4F0041CE3C /* Build configuration list for PBXProject "CryptoWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 25B4A3A12376CA4F0041CE3C;
+			productRefGroup = 25B4A3AB2376CA4F0041CE3C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				25B4A3A92376CA4F0041CE3C /* CryptoWallet */,
+				25B4A3BF2376CA510041CE3C /* CryptoWalletTests */,
+				25B4A3CA2376CA520041CE3C /* CryptoWalletUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		25B4A3A82376CA4F0041CE3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B4A3BA2376CA510041CE3C /* LaunchScreen.storyboard in Resources */,
+				25B4A3E22376CF960041CE3C /* Ethereum.storyboard in Resources */,
+				25B4A3B72376CA510041CE3C /* Assets.xcassets in Resources */,
+				25B4A3B52376CA4F0041CE3C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3BE2376CA510041CE3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3C92376CA520041CE3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31D5A022CD28986935AB41EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoWallet-CryptoWalletUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EF25F8496E9C1D829830B11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoWalletTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ACCE213D7D03E49460432EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet/Pods-CryptoWallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet/Pods-CryptoWallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet/Pods-CryptoWallet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A76E952E82669315C357FFA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoWallet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE6F916738318E2A935BF2CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet-CryptoWalletUITests/Pods-CryptoWallet-CryptoWalletUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet-CryptoWalletUITests/Pods-CryptoWallet-CryptoWalletUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoWallet-CryptoWalletUITests/Pods-CryptoWallet-CryptoWalletUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25B4A3A62376CA4F0041CE3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B4A3E423770E800041CE3C /* QRCodeImageView.swift in Sources */,
+				25B4A3B22376CA4F0041CE3C /* ViewController.swift in Sources */,
+				25B4A3E02376CF8E0041CE3C /* EthereumViewController.swift in Sources */,
+				25B4A3AE2376CA4F0041CE3C /* AppDelegate.swift in Sources */,
+				25B4A3E62377101D0041CE3C /* UserDefaultsUtil.swift in Sources */,
+				25B4A3B02376CA4F0041CE3C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3BC2376CA510041CE3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B4A3C52376CA510041CE3C /* CryptoWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25B4A3C72376CA520041CE3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25B4A3D02376CA520041CE3C /* CryptoWalletUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25B4A3C22376CA510041CE3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25B4A3A92376CA4F0041CE3C /* CryptoWallet */;
+			targetProxy = 25B4A3C12376CA510041CE3C /* PBXContainerItemProxy */;
+		};
+		25B4A3CD2376CA520041CE3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 25B4A3A92376CA4F0041CE3C /* CryptoWallet */;
+			targetProxy = 25B4A3CC2376CA520041CE3C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		25B4A3B32376CA4F0041CE3C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25B4A3B42376CA4F0041CE3C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		25B4A3B82376CA510041CE3C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25B4A3B92376CA510041CE3C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		25B4A3D22376CA520041CE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		25B4A3D32376CA520041CE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25B4A3D52376CA520041CE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C14E3D7D86BA90CD9AC1C80 /* Pods-CryptoWallet.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CryptoWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25B4A3D62376CA520041CE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE24E5E72D8EB4A17269E0A /* Pods-CryptoWallet.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = CryptoWallet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		25B4A3D82376CA520041CE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2BDE062BD00BEAD505A8026 /* Pods-CryptoWalletTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				INFOPLIST_FILE = CryptoWalletTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoWallet.app/CryptoWallet";
+			};
+			name = Debug;
+		};
+		25B4A3D92376CA520041CE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCBFDC0A7BABE06EF38F3243 /* Pods-CryptoWalletTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				INFOPLIST_FILE = CryptoWalletTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoWallet.app/CryptoWallet";
+			};
+			name = Release;
+		};
+		25B4A3DB2376CA520041CE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 058028ABD0C222F4689DA426 /* Pods-CryptoWallet-CryptoWalletUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				INFOPLIST_FILE = CryptoWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoWallet;
+			};
+			name = Debug;
+		};
+		25B4A3DC2376CA520041CE3C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E741373C8CD92850E3FFED55 /* Pods-CryptoWallet-CryptoWalletUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NAJPYUJBUB;
+				INFOPLIST_FILE = CryptoWalletUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = one.credify.CryptoWalletUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CryptoWallet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25B4A3A52376CA4F0041CE3C /* Build configuration list for PBXProject "CryptoWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B4A3D22376CA520041CE3C /* Debug */,
+				25B4A3D32376CA520041CE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25B4A3D42376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B4A3D52376CA520041CE3C /* Debug */,
+				25B4A3D62376CA520041CE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25B4A3D72376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B4A3D82376CA520041CE3C /* Debug */,
+				25B4A3D92376CA520041CE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25B4A3DA2376CA520041CE3C /* Build configuration list for PBXNativeTarget "CryptoWalletUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25B4A3DB2376CA520041CE3C /* Debug */,
+				25B4A3DC2376CA520041CE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 25B4A3A22376CA4F0041CE3C /* Project object */;
+}

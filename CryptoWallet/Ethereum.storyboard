@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ext-vR-Y7s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ethereum View Controller-->
+        <scene sceneID="5ni-KC-rse">
+            <objects>
+                <viewController id="Ext-vR-Y7s" customClass="EthereumViewController" customModule="CryptoWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tef-Ey-rbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPr-TG-GRV">
+                                <rect key="frame" x="16" y="76" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ETH Address:" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wUC-w3-inx">
+                                <rect key="frame" x="16" y="112.5" width="382" height="32"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="S4w-xU-I0E"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-4K-8lh" customClass="QRCodeImageView" customModule="CryptoWallet" customModuleProvider="target">
+                                <rect key="frame" x="87" y="152.5" width="240" height="240"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="cYy-OP-4ry"/>
+                                    <constraint firstAttribute="height" constant="240" id="gdL-an-I3c"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jeo-cQ-dJ3">
+                                <rect key="frame" x="16" y="424.5" width="382" height="144"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-yp-w6d">
+                                        <rect key="frame" x="16" y="24" width="350" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Qey-wp-cDN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-cD-6rv">
+                                        <rect key="frame" x="131" y="80" width="120" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="k2C-4I-NBu"/>
+                                            <constraint firstAttribute="height" constant="40" id="tA2-pI-GVi"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="send:" destination="Ext-vR-Y7s" eventType="touchUpInside" id="2vx-aG-cn1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="NbG-88-XKx"/>
+                                    <constraint firstItem="k7d-yp-w6d" firstAttribute="leading" secondItem="Jeo-cQ-dJ3" secondAttribute="leading" constant="16" id="eZ8-U6-RMS"/>
+                                    <constraint firstItem="k7d-yp-w6d" firstAttribute="top" secondItem="Jeo-cQ-dJ3" secondAttribute="top" constant="24" id="ek1-tc-Clr"/>
+                                    <constraint firstAttribute="trailing" secondItem="k7d-yp-w6d" secondAttribute="trailing" constant="16" id="hxt-Gi-Clv"/>
+                                    <constraint firstItem="0cl-cD-6rv" firstAttribute="top" secondItem="k7d-yp-w6d" secondAttribute="bottom" constant="24" id="rpm-iI-tE6"/>
+                                    <constraint firstItem="0cl-cD-6rv" firstAttribute="centerX" secondItem="Jeo-cQ-dJ3" secondAttribute="centerX" id="xLT-dJ-qBV"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8W5-mO-qMx" firstAttribute="trailing" secondItem="wUC-w3-inx" secondAttribute="trailing" constant="16" id="DsN-Qh-kIn"/>
+                            <constraint firstItem="8W5-mO-qMx" firstAttribute="trailing" secondItem="KPr-TG-GRV" secondAttribute="trailing" constant="16" id="GVx-6k-yQe"/>
+                            <constraint firstItem="8W5-mO-qMx" firstAttribute="trailing" secondItem="Jeo-cQ-dJ3" secondAttribute="trailing" constant="16" id="HI6-JH-iJ2"/>
+                            <constraint firstItem="wUC-w3-inx" firstAttribute="leading" secondItem="8W5-mO-qMx" secondAttribute="leading" constant="16" id="IB0-cp-ch7"/>
+                            <constraint firstItem="Jeo-cQ-dJ3" firstAttribute="top" secondItem="bf0-4K-8lh" secondAttribute="bottom" constant="32" id="JLG-fz-DJC"/>
+                            <constraint firstItem="Jeo-cQ-dJ3" firstAttribute="leading" secondItem="8W5-mO-qMx" secondAttribute="leading" constant="16" id="MQ0-6f-ThS"/>
+                            <constraint firstItem="KPr-TG-GRV" firstAttribute="top" secondItem="8W5-mO-qMx" secondAttribute="top" constant="32" id="P9n-t3-i8N"/>
+                            <constraint firstItem="KPr-TG-GRV" firstAttribute="centerX" secondItem="Tef-Ey-rbQ" secondAttribute="centerX" id="PaY-oa-gvt"/>
+                            <constraint firstItem="wUC-w3-inx" firstAttribute="top" secondItem="KPr-TG-GRV" secondAttribute="bottom" constant="16" id="Tqg-Lm-Fo4"/>
+                            <constraint firstItem="bf0-4K-8lh" firstAttribute="top" secondItem="wUC-w3-inx" secondAttribute="bottom" constant="8" id="Up0-BM-00m"/>
+                            <constraint firstItem="KPr-TG-GRV" firstAttribute="leading" secondItem="8W5-mO-qMx" secondAttribute="leading" constant="16" id="ipn-WO-xD1"/>
+                            <constraint firstItem="bf0-4K-8lh" firstAttribute="centerX" secondItem="Tef-Ey-rbQ" secondAttribute="centerX" id="rGK-cg-B5u"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8W5-mO-qMx"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="k7d-yp-w6d" id="tOU-Af-iCB"/>
+                        <outlet property="balanceLabel" destination="KPr-TG-GRV" id="1KZ-AS-9Yq"/>
+                        <outlet property="ethAddressTextView" destination="wUC-w3-inx" id="iyM-Qt-Eja"/>
+                        <outlet property="qrCodeView" destination="bf0-4K-8lh" id="jwN-Gf-mrq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwP-Us-y9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257.97101449275362" y="-258.48214285714283"/>
+        </scene>
+    </scenes>
+</document>

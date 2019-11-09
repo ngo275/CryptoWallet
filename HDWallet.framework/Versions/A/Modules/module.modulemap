@@ -1,0 +1,8 @@
+framework module "HDWallet" {
+	header "ref.h"
+    header "HDWallet.objc.h"
+    header "Universe.objc.h"
+    header "HDWallet.h"
+
+    export *
+}

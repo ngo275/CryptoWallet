@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mnemonic:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFB-Dc-y86">
+                                <rect key="frame" x="8" y="76" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ETH adress:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4z-ed-v7v">
+                                <rect key="frame" x="8" y="112.5" width="398" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jte-Mk-9TK">
+                                <rect key="frame" x="174" y="193" width="66" height="30"/>
+                                <state key="normal" title="Ethereum"/>
+                                <connections>
+                                    <action selector="goETH:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROG-Xk-6iA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iwA-MN-yx0">
+                                <rect key="frame" x="183.5" y="239" width="47" height="30"/>
+                                <state key="normal" title="Bitcoin"/>
+                                <connections>
+                                    <action selector="goBTC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Niv-TP-gdY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILD-LW-QPe">
+                                <rect key="frame" x="187.5" y="800" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vMI-a0-HzQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xFB-Dc-y86" secondAttribute="trailing" constant="8" id="7lS-mN-dqa"/>
+                            <constraint firstItem="ILD-LW-QPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CDE-7a-Bvb"/>
+                            <constraint firstItem="jte-Mk-9TK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H2z-pG-WSk"/>
+                            <constraint firstItem="xFB-Dc-y86" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="KWh-75-BJX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H4z-ed-v7v" secondAttribute="trailing" constant="8" id="LwM-d4-PXt"/>
+                            <constraint firstItem="xFB-Dc-y86" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PkT-Oj-TcJ"/>
+                            <constraint firstItem="jte-Mk-9TK" firstAttribute="top" secondItem="H4z-ed-v7v" secondAttribute="bottom" constant="60" id="SsF-AN-pDb"/>
+                            <constraint firstItem="iwA-MN-yx0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YaV-sw-kUo"/>
+                            <constraint firstItem="iwA-MN-yx0" firstAttribute="top" secondItem="jte-Mk-9TK" secondAttribute="bottom" constant="16" id="c24-fE-j0f"/>
+                            <constraint firstItem="H4z-ed-v7v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hTD-xi-SuL"/>
+                            <constraint firstItem="H4z-ed-v7v" firstAttribute="top" secondItem="xFB-Dc-y86" secondAttribute="bottom" constant="16" id="nTX-Ub-0RW"/>
+                            <constraint firstItem="xFB-Dc-y86" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="qfM-bH-HVu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ILD-LW-QPe" secondAttribute="bottom" constant="32" id="rSO-dq-w9l"/>
+                            <constraint firstItem="H4z-ed-v7v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="s6S-ri-anB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="btcButton" destination="iwA-MN-yx0" id="zNF-Is-ovr"/>
+                        <outlet property="ethAddressLabel" destination="H4z-ed-v7v" id="0Yv-6t-K9e"/>
+                        <outlet property="ethButton" destination="jte-Mk-9TK" id="7u4-IJ-qai"/>
+                        <outlet property="mnemonicLabel" destination="xFB-Dc-y86" id="OO2-Oc-kqJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86.956521739130437" y="18.75"/>
+        </scene>
+    </scenes>
+</document>
