@@ -12,7 +12,7 @@ struct UserDefaultsUtil {
     private static let userDefaults = UserDefaults.standard
 
     private enum CacheKeys: String, CaseIterable {
-        case mnemonic
+        case mnemonic, ethNetwork
     }
 
     static var mnemonic: String {
@@ -22,6 +22,16 @@ struct UserDefaultsUtil {
         
         get {
             return userDefaults.string(forKey: CacheKeys.mnemonic.rawValue) ?? ""
+        }
+    }
+    
+    static var ethNetwork: EthNetwork {
+        set {
+            userDefaults.set(newValue.rawValue, forKey: CacheKeys.ethNetwork.rawValue)
+        }
+        
+        get {
+            return EthNetwork(rawValue: userDefaults.string(forKey: CacheKeys.ethNetwork.rawValue) ?? "") ?? .ropsten
         }
     }
 

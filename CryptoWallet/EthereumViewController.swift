@@ -23,16 +23,29 @@ struct ERC20Token {
     var symbol: String
 }
 
+enum EthNetwork: String {
+    case main, ropsten, rinkeby
+}
+
 class EthereumViewController: UIViewController {
 
     private var ethWallet: EthWallet!
     private var keystoreManager: KeystoreManager!
-    private var web3: web3!
+    private var web3: web3! {
+        didSet {
+            networkButton?.setTitle(UserDefaultsUtil.ethNetwork.rawValue, for: .normal)
+            getBalance()
+        }
+    }
     
     @IBOutlet private weak var balanceLabel: UILabel!
     @IBOutlet private weak var ethAddressTextView: UITextView!
+    @IBOutlet private weak var ethToAddressTextField: UITextField!
+    @IBOutlet private weak var erc20ToAddressTextField: UITextField!
     @IBOutlet private weak var amountTextField: UITextField!
+    @IBOutlet private weak var erc20AmountTextField: UITextField!
     @IBOutlet private weak var qrCodeView: QRCodeImageView!
+    @IBOutlet private weak var networkButton: UIButton!
     
     static func instantiate(ethWallet: EthWallet) -> EthereumViewController {
         let sb = UIStoryboard(name: "Ethereum", bundle: Bundle(for: EthereumViewController.self))
@@ -49,16 +62,11 @@ class EthereumViewController: UIViewController {
         qrCodeView.updateQrImage(urlString: ethWallet.address)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        getBalance()
-    }
-    
     // MARK: - Private methods
     
     private func web3SetUp() {
         let data = ethWallet.data
+        let network = UserDefaultsUtil.ethNetwork
         if ethWallet.isHD {
             let keystore = BIP32Keystore(data)!
             keystoreManager = KeystoreManager([keystore])
@@ -66,13 +74,20 @@ class EthereumViewController: UIViewController {
             let keystore = EthereumKeystoreV3(data)!
             keystoreManager = KeystoreManager([keystore])
         }
-        web3 = Web3.InfuraRopstenWeb3()
+        switch network {
+        case .main:
+            web3 = Web3.InfuraMainnetWeb3()
+        case .ropsten:
+            web3 = Web3.InfuraRopstenWeb3()
+        case .rinkeby:
+            web3 = Web3.InfuraRinkebyWeb3()
+        }
         web3.addKeystoreManager(keystoreManager)
     }
     
     private func getBalance() {
         let walletAddress = EthereumAddress(ethWallet.address)!
-        let balanceResult = try! web3.eth.getBalance(address: walletAddress)
+        guard let balanceResult = try? web3.eth.getBalance(address: walletAddress) else { return }
         let balanceString = Web3.Utils.formatToEthereumUnits(balanceResult, toUnits: .eth, decimals: 3)!
         balanceLabel.text = "\(balanceString) ETH"
     }
@@ -93,12 +108,11 @@ class EthereumViewController: UIViewController {
             extraData: Data(),
             transactionOptions: options
         )!
-        let result = try! tx.send(password: "")
+        guard let result = try? tx.send(password: "") else { return }
         print(result.hash)
     }
     
-    private func sendERC20(to: String) {
-        let value: String = "1.0" // In Tokens
+    private func sendERC20(value: String, to: String) {
         let walletAddress = EthereumAddress(ethWallet.address)! // Your wallet address
         let toAddress = EthereumAddress(to)!
         let token = ERC20Token(name: "JB Coin", address: "", decimals: "18", symbol: "JBC")
@@ -121,10 +135,37 @@ class EthereumViewController: UIViewController {
         print(result.hash)
     }
     
-    // MARK: - Private methods
+    // MARK: - IBAction methods
     
-    @IBAction func send(_ sender: Any) {
+    @IBAction func changeNetwork(_ sender: Any) {
+        let alert = UIAlertController(title: "Eterheum Network", message: nil, preferredStyle: .actionSheet)
+        let mainAction = UIAlertAction(title: "Mainnet", style: .default) { [weak self] _ in
+            UserDefaultsUtil.ethNetwork = .main
+            self?.web3SetUp()
+        }
+        let ropstenAction = UIAlertAction(title: "Ropsten", style: .default) { [weak self] _ in
+            UserDefaultsUtil.ethNetwork = .ropsten
+            self?.web3SetUp()
+        }
+        let rinkebyAction = UIAlertAction(title: "Rinkeby", style: .default) { [weak self] _ in
+            UserDefaultsUtil.ethNetwork = .rinkeby
+            self?.web3SetUp()
+        }
+        alert.addAction(mainAction)
+        alert.addAction(ropstenAction)
+        alert.addAction(rinkebyAction)
+        present(alert, animated: true)
+    }
+    
+    @IBAction private func send(_ sender: Any) {
         guard let value = amountTextField.text else { return }
-        sendEth(value: value, to: "0x81b7e08f65bdf5648606c89998a9cc8164397647")
+        guard let to = ethToAddressTextField.text else { return }
+        sendEth(value: value, to: to)
+    }
+    
+    @IBAction private func sendERC20(_ sender: Any) {
+        guard let value = erc20AmountTextField.text else { return }
+        guard let to = erc20ToAddressTextField.text else { return }
+        sendERC20(value: value, to: to)
     }
 }
